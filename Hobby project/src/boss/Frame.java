@@ -7,18 +7,10 @@ import java.awt.Image;
 import javax.swing.*;
 
 public class Frame  extends JFrame{
+	//JLayeredPane layeredPane =new JLayeredPane();
 
 Label label=new Label();
-//Panel panel=new Panel();
-/*	
-	public void paint(Graphics g) {
-		Graphics2D g2D =(Graphics2D)g;
-		
-
-	g2D.drawImage(backgroundImage, 0, 0, 900, 720, null);
-
-	}
-	*/
+Panel panel=new Panel();
 Frame(){
 	
 	this.setTitle("game");
@@ -28,18 +20,21 @@ Frame(){
 	this.setVisible(true);
 	this.setResizable(false);
 	
-	this.add(label);
+	//this.add(label);
 	
-	//this.setLayout(null);
+//this.setLayout(null);//if this is open rocket doesn't appear//if we add setBound
 	this.setLocationRelativeTo(null);//if we add graphics
 this.addKeyListener(label);
-//this.setLayout(null);
-	//this.getContentPane().setBackground(new ImageIcon(backgroundImage));
-	
-	//if we add setBound
+//panel.add(label);
+	//label.setVisible(true);
+	//label.setOpaque(true);
+	//layeredPane.add(panel,JLayeredPane.DEFAULT_LAYER);
+//layeredPane.add(label, JLayeredPane.DRAG_LAYER);
+this.add(label);
 
-	//this.add(panel);
-	
+this.add(panel);
+
+
 }
 
 
