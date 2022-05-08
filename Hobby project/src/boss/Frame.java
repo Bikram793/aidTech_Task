@@ -11,6 +11,7 @@ public class Frame  extends JFrame{
 
 Label label=new Label();
 Panel panel=new Panel();
+Enemy enemy=new Enemy();
 Frame(){
 	
 	this.setTitle("game");
@@ -25,11 +26,14 @@ Frame(){
 //this.setLayout(null);//if this is open rocket doesn't appear//if we add setBound
 	this.setLocationRelativeTo(null);//if we add graphics
 this.addKeyListener(label);
+
+
 //panel.add(label);
 	//label.setVisible(true);
 	//label.setOpaque(true);
 	//layeredPane.add(panel,JLayeredPane.DEFAULT_LAYER);
 //layeredPane.add(label, JLayeredPane.DRAG_LAYER);
+//this.add(enemy);
 this.add(label);
 
 this.add(panel);

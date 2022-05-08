@@ -14,6 +14,7 @@ public class Panel extends JPanel{
 
 Panel(){
 	background=new ImageIcon("space.jpg").getImage();
+
 	//this.addKeyListener(label);
 	this.setLayout(null );
 //	this.add(label);
@@ -29,7 +30,8 @@ public void paintComponent(Graphics g) {
 	Graphics2D bo =(Graphics2D)g;
 	//g2D.drawImage(background, x, y, null);
 
-bo.drawImage(background, 0, 0, 900, 720, null);
+	bo.drawImage(background, 0, 0, 900, 720, null);  
+
 }
 
 }

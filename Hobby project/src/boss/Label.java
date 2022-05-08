@@ -17,7 +17,7 @@ import javax.swing.JLayeredPane;
 
 public class Label  extends JLabel implements KeyListener{
 	
-
+Enemy enemy=new Enemy();
 Image image;
 	//Image background;
 
@@ -27,7 +27,7 @@ Label(){
 		this.setBounds(100, 200, 1000, 1000);
 		//background=new ImageIcon("space.jpg").getImage();
 	//this.setVisible(true);
-		
+		this.add(enemy);
 	}
 	
 	public void paintComponent(Graphics g) {
@@ -43,15 +43,22 @@ Label(){
 	public void keyTyped(KeyEvent e) {
 		//keyTyped = Invoked when a key is typed. Uses KeyChar, char output
 		switch(e.getKeyChar()) {
-			case 'a': this.setLocation(this.getX()-10, this.getY());
-			
+			case 'a':if(this.getX()>-10) {
+				this.setLocation(this.getX()-10, this.getY());
+			}
 				break;
-			case 'w': this.setLocation(this.getX(), this.getY()-10);
+			case 'w': if(this.getY()>0) {
+				this.setLocation(this.getX(), this.getY()-10);
+			}
 				break;
-			case 's': this.setLocation(this.getX(), this.getY()+10);
+			case 's': if(this.getY()<650) {
+				this.setLocation(this.getX(), this.getY()+10);
+			}
 				break;
-			case 'd': this.setLocation(this.getX()+10, this.getY());
+			case 'd': if(this.getX()<832) {
+				this.setLocation(this.getX()+10, this.getY());
 				break;
+			}
 		}
 	}
 	
@@ -60,13 +67,25 @@ Label(){
 	public void keyPressed(KeyEvent e) {
 		//keyPressed = Invoked when a physical key is pressed down. Uses KeyCode, int output
 		switch(e.getKeyCode()) {
-		case 37: this.setLocation(this.getX()-10, this.getY());
+		case 37: 
+			if(this.getX()>-10) {
+				this.setLocation(this.getX()-10, this.getY());
+			}
 			break;
-		case 38: this.setLocation(this.getX(), this.getY()-10);
+		case 38: 
+		 if(this.getY()>0) {
+			this.setLocation(this.getX(), this.getY()-10);
+		}
 			break;
-		case 39: this.setLocation(this.getX()+10, this.getY());
+		case 39: 
+			if(this.getX()<832) {
+				this.setLocation(this.getX()+10, this.getY());
+			}
 			break;
-		case 40: this.setLocation(this.getX(), this.getY()+10);
+		case 40:
+		case 's': if(this.getY()<650) {
+				this.setLocation(this.getX(), this.getY()+10);
+			}
 			break;
 	}
 	
