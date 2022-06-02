@@ -33,12 +33,12 @@ this.addKeyListener(label);
 	//label.setOpaque(true);
 	//layeredPane.add(panel,JLayeredPane.DEFAULT_LAYER);
 //layeredPane.add(label, JLayeredPane.DRAG_LAYER);
-//this.add(enemy);
+
+
 this.add(label);
 
+this.add(enemy);
 this.add(panel);
-
-
 }
 
 

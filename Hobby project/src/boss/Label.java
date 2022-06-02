@@ -17,17 +17,17 @@ import javax.swing.JLayeredPane;
 
 public class Label  extends JLabel implements KeyListener{
 	
-Enemy enemy=new Enemy();
+//Enemy enemy=new Enemy();
 Image image;
 	//Image background;
-
+JLayeredPane layeredPane=new JLayeredPane();
 Label(){
 	
 		image=new ImageIcon("rocket.png").getImage();
 		this.setBounds(100, 200, 1000, 1000);
 		//background=new ImageIcon("space.jpg").getImage();
 	//this.setVisible(true);
-		this.add(enemy);
+	//	this.add(enemy);
 	}
 	
 	public void paintComponent(Graphics g) {

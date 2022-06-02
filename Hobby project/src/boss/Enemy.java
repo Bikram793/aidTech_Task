@@ -19,7 +19,7 @@ public class Enemy extends JLabel {
 		
 	//this.addKeyListener(label);
 	//this.setVisible(true);
-	//this.setBounds(0, 0, 300, 400);
+	this.setBounds(0, 0, 300, 400);
 	//this.add(label);
 	//this.addKeyListener(label);
 
