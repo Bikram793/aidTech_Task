@@ -15,16 +15,7 @@ public class Panel extends JPanel{
 Panel(){
 	background=new ImageIcon("space.jpg").getImage();
 
-	//this.addKeyListener(label);
-	this.setLayout(null );
-//	this.add(label);
-	
-//this.addKeyListener(label);
-//this.setVisible(true);
-//this.setBounds(0, 0, 300, 400);
-//this.add(label);
-//this.addKeyListener(label);
-
+	//this.setLayout(null );
 }
 public void paintComponent(Graphics g) {
 	Graphics2D bo =(Graphics2D)g;
